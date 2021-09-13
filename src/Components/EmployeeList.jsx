@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Item } from "semantic-ui-react";
+import EmployeeModal from './EmployeeModal'
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
@@ -22,7 +23,10 @@ const EmployeeList = () => {
           circular
           className="avatar"
         />
-        <Item.Header>{`${employee.first_name} ${employee.last_name}`}</Item.Header>
+        <Item.Header className="name">{`${employee.first_name} ${employee.last_name}`}</Item.Header>
+        <Item.Extra>
+          <EmployeeModal employee={employee} />
+        </Item.Extra>
       </Item>
     );
   });

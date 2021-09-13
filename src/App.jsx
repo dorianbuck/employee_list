@@ -4,7 +4,7 @@ import { Container, Header } from "semantic-ui-react";
 
 const App = () => {
   return (
-    <Container text>
+    <Container textAlign="center">
       <Header size="large" id="header">
         Employee List
       </Header>
