@@ -1,10 +1,10 @@
 import React from "react";
-import EmployeeList from "./components/EmployeeList";
+import EmployeeList from './components/EmployeeList'
 import { Container, Header } from "semantic-ui-react";
 
 const App = () => {
   return (
-    <Container textAlign="center">
+    <Container>
       <Header size="large" id="header">
         Employee List
       </Header>

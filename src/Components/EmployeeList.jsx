@@ -16,6 +16,7 @@ const EmployeeList = () => {
 
   const employeeList = employees.map((employee) => {
     return (
+      
       <Item key={employee.id} className="employee-item">
         <Item.Image
           src={employee.avatar}
@@ -25,13 +26,16 @@ const EmployeeList = () => {
         />
         <Item.Header className="name">{`${employee.first_name} ${employee.last_name}`}</Item.Header>
         <Item.Extra>
-          <EmployeeModal employee={employee} />
+          
+          <EmployeeModal id={employee.id} />
+          
         </Item.Extra>
-      </Item>
+        </Item>
+       
     );
   });
   return (
-    <Item.Group divided="true" id="employee-list">
+    <Item.Group relaxed="very" divided="true" id="employee-list">
       {employeeList}
     </Item.Group>
   );
